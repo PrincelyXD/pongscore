@@ -56,9 +56,11 @@ function p2Add() {
   }
 }
 
+// RESET BTN CLICKED
 const reset = document.querySelector("#reset");
+reset.addEventListener("click", resetFunction);
 
-reset.addEventListener("click", function () {
+function resetFunction() {
   curr1 = 0;
   player1.innerText = 0;
   player1.classList.remove("won");
@@ -72,4 +74,21 @@ reset.addEventListener("click", function () {
   playerOneAdd.addEventListener("click", p1Add);
   playerTwoAdd.addEventListener("click", p2Add);
   winName.style.display = "none";
-});
+}
+
+// WHEN RANGE CHANGES reset the game.
+range.addEventListener("change", resetFunction2);
+function resetFunction2() {
+  curr1 = 0;
+  player1.innerText = 0;
+  player1.classList.remove("won");
+  player1.classList.remove("lost");
+  curr2 = 0;
+  player2.innerText = 0;
+  player2.classList.remove("won");
+  player2.classList.remove("lost");
+  winCard.style.display = "none";
+  playerOneAdd.addEventListener("click", p1Add);
+  playerTwoAdd.addEventListener("click", p2Add);
+  winName.style.display = "none";
+}
