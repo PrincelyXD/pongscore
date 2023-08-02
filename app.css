@@ -100,6 +100,23 @@ body {
 .lost {
   color: red;
 }
+.v-100 {
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 20px;
+  animation: fadeIn 1.5s forwards;
+  display: none;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0.2;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
 
 .win-card {
   height: 100px;

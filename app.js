@@ -9,6 +9,8 @@ const range = document.querySelector("#range");
 //  WIN-CARD
 const winCard = document.querySelector("#winCard");
 
+// WINNER NAME
+const winName = document.querySelector("#v100");
 // // player 1
 
 let curr1 = (player1.innerText = 0);
@@ -27,6 +29,8 @@ function p1Add() {
     winCard.style.display = "block";
     winCard.classList.add("bg-win");
     playerTwoAdd.removeEventListener("click", p2Add);
+    winName.innerText = "Player One wins!";
+    winName.style.display = "inline-block";
   }
 }
 
@@ -47,6 +51,8 @@ function p2Add() {
     winCard.style.display = "block";
     winCard.classList.add("bg-win");
     playerOneAdd.removeEventListener("click", p1Add);
+    winName.innerText = "Player Two wins!";
+    winName.style.display = "inline-block";
   }
 }
 
@@ -65,4 +71,5 @@ reset.addEventListener("click", function () {
   winCard.style.display = "none";
   playerOneAdd.addEventListener("click", p1Add);
   playerTwoAdd.addEventListener("click", p2Add);
+  winName.style.display = "none";
 });
