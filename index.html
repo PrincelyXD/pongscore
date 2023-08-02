@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta property="og:title" content="A Table Tennis score keeper." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://PongScore.vercel.app" />
+    <meta
+      property="og:image"
+      content="https://PongScore.vercel.app/pong.jpeg"
+    />
+    <meta property="og:site_name" content="Pong Score" />
+    <meta property="og:description" content="A Table Tennis score Keeper." />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pong | Score</title>
+    <link rel="stylesheet" href="app.css" />
+    <link rel="icon" href="bg.jpg" type="img/gif/png" />
+  </head>
+  <body>
+    <section class="container">
+      <div class="box">
+        <div class="img-box"></div>
+        <div id="v-99">
+          <h2 class="game">Ping Pong Score Keeper</h2>
+
+          <h2 class="score-h2">
+            <span id="player1">0</span> <b>:</b> <span id="player2">0</span>
+          </h2>
+
+          <p class="r-20">Use the buttons below to keep score.</p>
+
+          <span class="select-text">Playing To</span>
+
+          <select name="range" id="range" class="select-menu">
+            <option value="3">3</option>
+            <option value="5">5</option>
+            <option value="7">7</option>
+            <option value="11">11</option>
+          </select>
+
+          <div class="footer">
+            <button id="playerOneAdd" class="btn">+1 Player One</button>
+            <button id="playerTwoAdd" class="btn">+1 Player Two</button>
+            <button id="reset" class="btn">Reset</button>
+          </div>
+
+          <div class="win-card" id="winCard">
+            <h2>Winner !!</h2>
+            <span>🎉</span>
+            <span>🎉</span>
+            <span>🎉</span>
+            <span>🎉</span>
+            <span>🎉</span>
+            <span>🎉</span>
+            <span>🎉</span>
+            <span>🎉</span>
+            <span>🎉</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>

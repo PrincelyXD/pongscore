@@ -1,0 +1,132 @@
+body {
+  background-color: #000117;
+  font-family: sans-serif;
+}
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  width: 320px;
+  height: 375px;
+  border-radius: 5px;
+  position: relative;
+  background-color: white;
+}
+
+.img-box {
+  width: inherit;
+  height: 55%;
+  border-radius: 5px 5px 0px 0px;
+  background-image: url(pong.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.game {
+  color: #3b3b3b;
+  font-size: 10px;
+  font-weight: 800;
+  margin: 0;
+  display: block;
+  padding: 8px 8px;
+  border-bottom: 2px solid #dddddd;
+}
+
+.score-h2 {
+  color: #1c1c1c;
+  font-size: 25px;
+  margin: 10px 15px;
+  margin-bottom: 0;
+}
+
+.r-20 {
+  color: #3b3b3b;
+  font-size: 11px;
+  font-weight: 500;
+  margin-top: 5px;
+  margin-bottom: 13px;
+  margin-left: 15px;
+}
+
+.select-text {
+  color: #3b3b3b;
+  font-size: 13px;
+  font-weight: 800;
+  margin-left: 15px;
+}
+
+.select-menu {
+  width: 45px;
+  color: #f2f2f2;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 3px;
+  text-align: center;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  background-image: linear-gradient(to right, #000117, #00011769);
+}
+.footer {
+  margin-top: 13px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  color: #f2f2f2;
+  font-size: 11px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  transition: 120ms ease-in;
+  background-image: linear-gradient(to right, #141e30, #243b55);
+}
+.btn:nth-of-type(2) {
+  margin: 0px 5px;
+}
+.btn:active {
+  transform: translateY(-2px);
+}
+
+.won {
+  color: green;
+}
+.lost {
+  color: red;
+}
+
+.win-card {
+  height: 100px;
+  width: 250px;
+  top: 50%;
+  left: 11%;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px 0px 10px 0px;
+  background-color: #3f2856f8;
+  position: absolute;
+  display: none;
+  animation: glide 0.7s forwards;
+}
+
+@keyframes glide {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.bg-win {
+  background-image: url(beautiful.gif);
+  background-position: right;
+  background-size: 190%;
+  background-repeat: no-repeat;
+}
