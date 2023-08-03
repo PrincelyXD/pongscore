@@ -11,14 +11,12 @@ const winCard = document.querySelector("#winCard");
 
 // WINNER NAME
 const winName = document.querySelector("#v100");
-// // player 1
 
+// // player 1
 let curr1 = (player1.innerText = 0);
 playerOneAdd.addEventListener("click", p1Add);
-
 function p1Add() {
   const value = parseInt(range.value);
-
   if (curr1 < value) {
     curr1++;
     player1.innerText = curr1;
@@ -31,16 +29,15 @@ function p1Add() {
     playerTwoAdd.removeEventListener("click", p2Add);
     winName.innerText = "Player One wins!";
     winName.style.display = "inline-block";
+    playerOneAdd.classList.add("btn-disabled");
+    playerTwoAdd.classList.add("btn-disabled");
   }
 }
-
 // // player 2
 let curr2 = (player2.innerText = 0);
 playerTwoAdd.addEventListener("click", p2Add);
-
 function p2Add() {
   let value = parseInt(range.value);
-
   if (curr2 < value) {
     curr2++;
     player2.innerText = curr2;
@@ -53,6 +50,8 @@ function p2Add() {
     playerOneAdd.removeEventListener("click", p1Add);
     winName.innerText = "Player Two wins!";
     winName.style.display = "inline-block";
+    playerOneAdd.classList.add("btn-disabled");
+    playerTwoAdd.classList.add("btn-disabled");
   }
 }
 
@@ -63,17 +62,17 @@ reset.addEventListener("click", resetFunction);
 function resetFunction() {
   curr1 = 0;
   player1.innerText = 0;
-  player1.classList.remove("won");
-  player1.classList.remove("lost");
+  player1.classList.remove("won", "lost");
   curr2 = 0;
   player2.innerText = 0;
-  player2.classList.remove("won");
-  player2.classList.remove("lost");
+  player2.classList.remove("won", "lost");
   range.value = 3;
   winCard.style.display = "none";
   playerOneAdd.addEventListener("click", p1Add);
   playerTwoAdd.addEventListener("click", p2Add);
   winName.style.display = "none";
+  playerOneAdd.classList.remove("btn-disabled");
+  playerTwoAdd.classList.remove("btn-disabled");
 }
 
 // WHEN RANGE CHANGES reset the game.
@@ -81,14 +80,14 @@ range.addEventListener("change", resetFunction2);
 function resetFunction2() {
   curr1 = 0;
   player1.innerText = 0;
-  player1.classList.remove("won");
-  player1.classList.remove("lost");
+  player1.classList.remove("won", "lost");
   curr2 = 0;
   player2.innerText = 0;
-  player2.classList.remove("won");
-  player2.classList.remove("lost");
+  player2.classList.remove("won", "lost");
   winCard.style.display = "none";
   playerOneAdd.addEventListener("click", p1Add);
   playerTwoAdd.addEventListener("click", p2Add);
   winName.style.display = "none";
+  playerOneAdd.classList.remove("btn-disabled");
+  playerTwoAdd.classList.remove("btn-disabled");
 }
